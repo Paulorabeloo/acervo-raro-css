@@ -1,4 +1,4 @@
-# Acervo Raro — CSS do site / Site CSS
+# Acervo Raro - CSS do site / Site CSS
 
 [🇧🇷 Português](#-português) · [🇺🇸 English](#-english)
 
