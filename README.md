@@ -6,15 +6,7 @@
 
 ## 🇧🇷 Português
 
-CSS customizado da home da loja [acervoraro.com.br](https://acervoraro.com.br), uma curadoria de perfumaria de nicho em decants. A loja roda no tema **Ipanema** da Nuvemshop, e todo o estilo abaixo foi aplicado por cima do tema, bloco a bloco, pelo editor da plataforma.
-
-### Demonstração
-
-
-
-https://github.com/user-attachments/assets/c48a928b-3531-4375-9f09-9f661a204a13
-
-
+CSS customizado da home da loja, uma curadoria de perfumaria de nicho em decants. A loja roda no tema **Ipanema** da Nuvemshop, e todo o estilo abaixo foi aplicado por cima do tema, bloco a bloco, pelo editor da plataforma.
 
 ### Arquivos
 
@@ -59,15 +51,7 @@ Cada bloco é prefixado pelo `id` da seção no tema (`#ns-section-...`). Para r
 
 ## 🇺🇸 English
 
-Custom CSS for the home page of [acervoraro.com.br](https://acervoraro.com.br), a curated niche-perfume decant shop. The store runs on Nuvemshop's **Ipanema** theme, and every style below was layered on top of the theme, block by block, through the platform's editor.
-
-### Demo
-
-
-
-https://github.com/user-attachments/assets/33e081c7-e3ca-4147-a1a3-d21a248c70f8
-
-
+Custom CSS for the home page, a curated niche-perfume decant shop. The store runs on Nuvemshop's **Ipanema** theme, and every style below was layered on top of the theme, block by block, through the platform's editor.
 
 ### Files
 
