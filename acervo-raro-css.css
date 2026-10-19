@@ -1,0 +1,893 @@
+/* =====================================================================
+   ACERVO RARO — CSS customizado da home (acervoraro.com.br)
+   Extraído dos blocos <style> inline do HTML (tema Nuvemshop "Ipanema").
+   Cada bloco abaixo está exatamente como aparece no site, apenas
+   formatado e separado por seção.
+   ===================================================================== */
+
+
+/* ---------------------------------------------------------------------
+   0. VARIÁVEIS DO HEADER (inline no <div class="js-head-main">)
+   --------------------------------------------------------------------- */
+/*
+--header-background: #FFFFFF; background-color: #FFFFFF;
+--header-foreground: #000000; color: #000000;
+--header-foreground-opacity-10: #0000001A;
+--header-foreground-opacity-20: #00000033;
+--header-desktop-nav-background: var(--header-background);
+--header-desktop-nav-foreground: #000000;
+--nav-item-vertical-padding: 8px;
+--nav-item-horizontal-padding: 20px;
+--header-utilities-foreground: #1a1308;
+--header-featured-link-foreground: var(--header-foreground);
+--header-nav-divider-color: transparent;
+--header-badge-background: #FFFFFF;
+--header-badge-foreground: #000000;
+--logo-height-mobile: 56px;
+--logo-height-desktop: 90px;
+--utility-icon-size: 20px;
+--utility-icon-size-mobile: 20px;
+--utility-items-gap: 20px;
+--header-vertical-padding: 20px;
+--header-vertical-padding-mobile: 20px;
+--header-padding-x: 40px;
+--header-padding-x-mobile: 40px;
+*/
+
+
+/* ---------------------------------------------------------------------
+   1. SLIDESHOW (banner principal) — esconde a paginação
+   --------------------------------------------------------------------- */
+#ns-section-slideshow .swiper-pagination-outside,
+#ns-section-slideshow .swiper-pagination-bullets {
+  display: none !important;
+}
+
+
+/* ---------------------------------------------------------------------
+   2. SELOS / BARRA DE BENEFÍCIOS (section custom_1789737337957)
+      "100% originais · Curadoria de nicho · Envio Brasil · 3x sem juros"
+   --------------------------------------------------------------------- */
+@media (max-width:767px) {
+  #ns-section-custom_1789737337957 [data-store="code-block-code_zhwr"] > div > div {
+    position: relative !important;
+    overflow: hidden !important;
+    height: 56px;
+    scroll-snap-type: none !important;
+  }
+  #ns-section-custom_1789737337957 [data-store="code-block-code_zhwr"] > div > div > div {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100%;
+    transform: translateX(100%);
+    animation: ar-selo 20s ease-in-out infinite;
+  }
+  #ns-section-custom_1789737337957 [data-store="code-block-code_zhwr"] > div > div > div:nth-child(1) { animation-delay: -1s; }
+  #ns-section-custom_1789737337957 [data-store="code-block-code_zhwr"] > div > div > div:nth-child(2) { animation-delay: -16s; }
+  #ns-section-custom_1789737337957 [data-store="code-block-code_zhwr"] > div > div > div:nth-child(3) { animation-delay: -11s; }
+  #ns-section-custom_1789737337957 [data-store="code-block-code_zhwr"] > div > div > div:nth-child(4) { animation-delay: -6s; }
+}
+@keyframes ar-selo {
+  0%         { transform: translateX(100%); }
+  4%, 25%    { transform: translateX(0); }
+  29%        { transform: translateX(-100%); }
+  29.01%, 100% { transform: translateX(100%); }
+}
+@media (max-width:767px) and (prefers-reduced-motion:reduce) {
+  #ns-section-custom_1789737337957 [data-store="code-block-code_zhwr"] > div > div > div {
+    animation: none;
+    transform: none;
+  }
+  #ns-section-custom_1789737337957 [data-store="code-block-code_zhwr"] > div > div > div:nth-child(n+2) {
+    display: none !important;
+  }
+}
+@media (max-width:767px) {
+  #ns-section-custom_1789737337957 .section-custom {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+/* Estilos inline do HTML dos selos (bloco de código "code_zhwr"), para referência: */
+/*
+.section-custom (wrapper da section): padding-left:40px; padding-right:40px; background-color:#fff4eb; color:#ffffff;
+div externo:      background:#fff4eb; padding:20px 0; text-align:left;
+div faixa:        max-width:1200px; margin:0 auto; display:flex; overflow-x:auto;
+                  scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none;
+cada selo:        flex:0 0 min(100%, max(25%, calc((700px - 100%) * 999)));
+                  scroll-snap-align:center; box-sizing:border-box; padding:0 20px;
+                  display:flex; align-items:center; justify-content:center; gap:12px;
+svg ícone:        width:30px; height:30px; flex:0 0 30px; stroke:#b8893c; fill:none;
+                  stroke-width:1.4; stroke-linecap:round; stroke-linejoin:round;
+strong (título):  display:block; margin:0; font-size:12.5px; font-weight:600;
+                  letter-spacing:.06em; text-transform:uppercase; color:#1a1308; line-height:1.3;
+span (subtítulo): display:block; margin-top:2px; font-size:12px; color:#6f5d48; line-height:1.35;
+*/
+
+
+/* ---------------------------------------------------------------------
+   3. VITRINE "OS MAIS PEDIDOS NO CLUBE" (product-list_1789741134368)
+      Inclui o hover "DECANT" com overlay dourado e selo circular.
+   --------------------------------------------------------------------- */
+#ns-section-product-list_1789741134368 .heading-block {
+  font-family: "Playfair Display", Georgia, serif !important;
+  font-weight: 700 !important;
+  letter-spacing: .04em !important;
+  text-transform: uppercase !important;
+  color: #1a1308 !important;
+}
+#ns-section-product-list_1789741134368 .product-item-name {
+  font-family: "Playfair Display", Georgia, serif !important;
+  font-size: 15px !important;
+  color: #1a1308 !important;
+  line-height: 1.35 !important;
+  margin-bottom: 4px !important;
+}
+#ns-section-product-list_1789741134368 .product-item-price {
+  font-size: 15px !important;
+  color: #1a1308 !important;
+  font-weight: 600 !important;
+}
+#ns-section-product-list_1789741134368 .swiper-pagination-bullet {
+  background: #a07b3f !important;
+  opacity: .3 !important;
+}
+#ns-section-product-list_1789741134368 .swiper-pagination-bullet-active {
+  opacity: 1 !important;
+}
+#ns-section-product-list_1789741134368 .slider-arrow {
+  fill: #a07b3f !important;
+}
+#ns-section-product-list_1789741134368 .product-item {
+  transition: transform .35s ease !important;
+}
+#ns-section-product-list_1789741134368 .product-item:hover {
+  transform: translateY(-6px) !important;
+}
+#ns-section-product-list_1789741134368 .product-item-stock-notice {
+  display: none !important;
+}
+#ns-section-product-list_1789741134368 .product-item-information,
+#ns-section-product-list_1789741134368 .product-item-link {
+  text-align: center !important;
+  align-items: center !important;
+}
+#ns-section-product-list_1789741134368 .product-item-image-container {
+  position: relative;
+  background: #fffaf5 !important;
+}
+#ns-section-product-list_1789741134368 .product-item-image-container > div:last-child {
+  position: relative;
+  overflow: hidden;
+}
+#ns-section-product-list_1789741134368 .product-item-image-container > div:last-child img {
+  transition: filter .4s;
+}
+#ns-section-product-list_1789741134368 .product-item-image-container > div:last-child::before,
+#ns-section-product-list_1789741134368 .product-item-image-container > div:last-child::after,
+#ns-section-product-list_1789741134368 .product-item-image-container::after {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  transition: all .4s;
+  z-index: 3;
+}
+#ns-section-product-list_1789741134368 .product-item-image-container > div:last-child::before {
+  content: "";
+  inset: 0;
+  background: #b08c6e;
+  mix-blend-mode: multiply;
+  z-index: 2;
+}
+#ns-section-product-list_1789741134368 .product-item-image-container > div:last-child::after {
+  content: "";
+  right: 4%;
+  bottom: 11%;
+  width: 42%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(26,19,8,.3);
+  background: #fff url("data:image/webp;base64,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") center/auto 88% no-repeat;
+  transform: scale(.9);
+}
+#ns-section-product-list_1789741134368 .product-item-image-container::after {
+  content: "DECANT";
+  right: 4%;
+  bottom: 3%;
+  width: 42%;
+  text-align: center;
+  font: 700 14px/1 sans-serif;
+  letter-spacing: .08em;
+  color: #fff;
+  text-shadow: 0 1px 8px rgba(26,19,8,.6);
+  z-index: 5;
+}
+@media (hover:hover) {
+  #ns-section-product-list_1789741134368 .product-item:hover .product-item-image-container > div:last-child img {
+    filter: grayscale(.85);
+  }
+  #ns-section-product-list_1789741134368 .product-item:hover .product-item-image-container > div:last-child::before,
+  #ns-section-product-list_1789741134368 .product-item:hover .product-item-image-container > div:last-child::after,
+  #ns-section-product-list_1789741134368 .product-item:hover .product-item-image-container::after {
+    opacity: 1;
+    transform: none;
+  }
+}
+#ns-section-product-list_1789741134368 .btn-primary {
+  background: #b8893c !important;
+  border-color: #b8893c !important;
+  color: #1a1308 !important;
+  border-radius: 2px !important;
+  text-transform: uppercase !important;
+  letter-spacing: .12em !important;
+  font-weight: 700 !important;
+}
+
+
+/* ---------------------------------------------------------------------
+   4. VITRINE "O ACERVO" (product-list_1789743667774)
+      Mesmo CSS da seção 3, apenas com outro ID de seção.
+   --------------------------------------------------------------------- */
+#ns-section-product-list_1789743667774 .heading-block {
+  font-family: "Playfair Display", Georgia, serif !important;
+  font-weight: 700 !important;
+  letter-spacing: .04em !important;
+  text-transform: uppercase !important;
+  color: #1a1308 !important;
+}
+#ns-section-product-list_1789743667774 .product-item-name {
+  font-family: "Playfair Display", Georgia, serif !important;
+  font-size: 15px !important;
+  color: #1a1308 !important;
+  line-height: 1.35 !important;
+  margin-bottom: 4px !important;
+}
+#ns-section-product-list_1789743667774 .product-item-price {
+  font-size: 15px !important;
+  color: #1a1308 !important;
+  font-weight: 600 !important;
+}
+#ns-section-product-list_1789743667774 .swiper-pagination-bullet {
+  background: #a07b3f !important;
+  opacity: .3 !important;
+}
+#ns-section-product-list_1789743667774 .swiper-pagination-bullet-active {
+  opacity: 1 !important;
+}
+#ns-section-product-list_1789743667774 .slider-arrow {
+  fill: #a07b3f !important;
+}
+#ns-section-product-list_1789743667774 .product-item {
+  transition: transform .35s ease !important;
+}
+#ns-section-product-list_1789743667774 .product-item:hover {
+  transform: translateY(-6px) !important;
+}
+#ns-section-product-list_1789743667774 .product-item-stock-notice {
+  display: none !important;
+}
+#ns-section-product-list_1789743667774 .product-item-information,
+#ns-section-product-list_1789743667774 .product-item-link {
+  text-align: center !important;
+  align-items: center !important;
+}
+#ns-section-product-list_1789743667774 .product-item-image-container {
+  position: relative;
+  background: #fffaf5 !important;
+}
+#ns-section-product-list_1789743667774 .product-item-image-container > div:last-child {
+  position: relative;
+  overflow: hidden;
+}
+#ns-section-product-list_1789743667774 .product-item-image-container > div:last-child img {
+  transition: filter .4s;
+}
+#ns-section-product-list_1789743667774 .product-item-image-container > div:last-child::before,
+#ns-section-product-list_1789743667774 .product-item-image-container > div:last-child::after,
+#ns-section-product-list_1789743667774 .product-item-image-container::after {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+  transition: all .4s;
+  z-index: 3;
+}
+#ns-section-product-list_1789743667774 .product-item-image-container > div:last-child::before {
+  content: "";
+  inset: 0;
+  background: #b08c6e;
+  mix-blend-mode: multiply;
+  z-index: 2;
+}
+#ns-section-product-list_1789743667774 .product-item-image-container > div:last-child::after {
+  content: "";
+  right: 4%;
+  bottom: 11%;
+  width: 42%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(26,19,8,.3);
+  background: #fff url("data:image/webp;base64,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") center/auto 88% no-repeat;
+  transform: scale(.9);
+}
+#ns-section-product-list_1789743667774 .product-item-image-container::after {
+  content: "DECANT";
+  right: 4%;
+  bottom: 3%;
+  width: 42%;
+  text-align: center;
+  font: 700 14px/1 sans-serif;
+  letter-spacing: .08em;
+  color: #fff;
+  text-shadow: 0 1px 8px rgba(26,19,8,.6);
+  z-index: 5;
+}
+@media (hover:hover) {
+  #ns-section-product-list_1789743667774 .product-item:hover .product-item-image-container > div:last-child img {
+    filter: grayscale(.85);
+  }
+  #ns-section-product-list_1789743667774 .product-item:hover .product-item-image-container > div:last-child::before,
+  #ns-section-product-list_1789743667774 .product-item:hover .product-item-image-container > div:last-child::after,
+  #ns-section-product-list_1789743667774 .product-item:hover .product-item-image-container::after {
+    opacity: 1;
+    transform: none;
+  }
+}
+#ns-section-product-list_1789743667774 .btn-primary {
+  background: #b8893c !important;
+  border-color: #b8893c !important;
+  color: #1a1308 !important;
+  border-radius: 2px !important;
+  text-transform: uppercase !important;
+  letter-spacing: .12em !important;
+  font-weight: 700 !important;
+}
+
+
+/* ---------------------------------------------------------------------
+   5. "CASAS QUE ESTÃO NO ACERVO" — carrossel de logos em marquee
+      (featured-brands_1789747520259)
+   --------------------------------------------------------------------- */
+#ns-section-featured-brands_1789747520259 .section-title-content:has([data-block-type="brand-group"]) {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+#ns-section-featured-brands_1789747520259 [data-block-type="brand-group"] {
+  --slot: 240px;
+}
+#ns-section-featured-brands_1789747520259 [data-block-type="brand-group"] .swiper {
+  height: 90px;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
+}
+#ns-section-featured-brands_1789747520259 [data-block-type="brand-group"] .swiper-wrapper {
+  transform: none !important;
+  position: relative;
+  height: 90px;
+}
+#ns-section-featured-brands_1789747520259 [data-block-type="brand-group"] .brand-logo-slide {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: var(--slot) !important;
+  height: 90px;
+  margin: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: ar-marcas 40s linear infinite;
+}
+#ns-section-featured-brands_1789747520259 [data-block-type="brand-group"] .brand-logo-slide:nth-child(2) { animation-delay: -5s; }
+#ns-section-featured-brands_1789747520259 [data-block-type="brand-group"] .brand-logo-slide:nth-child(3) { animation-delay: -10s; }
+#ns-section-featured-brands_1789747520259 [data-block-type="brand-group"] .brand-logo-slide:nth-child(4) { animation-delay: -15s; }
+#ns-section-featured-brands_1789747520259 [data-block-type="brand-group"] .brand-logo-slide:nth-child(5) { animation-delay: -20s; }
+#ns-section-featured-brands_1789747520259 [data-block-type="brand-group"] .brand-logo-slide:nth-child(6) { animation-delay: -25s; }
+#ns-section-featured-brands_1789747520259 [data-block-type="brand-group"] .brand-logo-slide:nth-child(7) { animation-delay: -30s; }
+#ns-section-featured-brands_1789747520259 [data-block-type="brand-group"] .brand-logo-slide:nth-child(8) { animation-delay: -35s; }
+#ns-section-featured-brands_1789747520259 [data-block-type="brand-group"] .swiper:hover .brand-logo-slide {
+  animation-play-state: paused;
+}
+#ns-section-featured-brands_1789747520259 [data-block-type="brand-group"] .brand-logo-block img {
+  width: auto !important;
+  height: 64px;
+  max-width: 200px;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: .75;
+}
+#ns-section-featured-brands_1789747520259 [data-block-type="brand-group"] .swiper-button-prev,
+#ns-section-featured-brands_1789747520259 [data-block-type="brand-group"] .swiper-button-next {
+  display: none !important;
+}
+@keyframes ar-marcas {
+  from { transform: translateX(calc(var(--slot) * 7)); }
+  to   { transform: translateX(calc(var(--slot) * -1)); }
+}
+@media (max-width:700px) {
+  #ns-section-featured-brands_1789747520259 [data-block-type="brand-group"] {
+    --slot: 170px;
+  }
+  #ns-section-featured-brands_1789747520259 [data-block-type="brand-group"] .swiper,
+  #ns-section-featured-brands_1789747520259 [data-block-type="brand-group"] .swiper-wrapper,
+  #ns-section-featured-brands_1789747520259 [data-block-type="brand-group"] .brand-logo-slide {
+    height: 70px;
+  }
+  #ns-section-featured-brands_1789747520259 [data-block-type="brand-group"] .brand-logo-block img {
+    height: 46px;
+    max-width: 140px;
+  }
+  #ns-section-featured-brands_1789747520259 [data-block-type="brand-group"] .swiper {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 22%, #000 78%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 22%, #000 78%, transparent);
+  }
+}
+@media (prefers-reduced-motion:reduce) {
+  #ns-section-featured-brands_1789747520259 [data-block-type="brand-group"] .swiper,
+  #ns-section-featured-brands_1789747520259 [data-block-type="brand-group"] .swiper-wrapper {
+    height: auto;
+  }
+  #ns-section-featured-brands_1789747520259 [data-block-type="brand-group"] .swiper-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 16px;
+  }
+  #ns-section-featured-brands_1789747520259 [data-block-type="brand-group"] .brand-logo-slide {
+    position: static !important;
+    animation: none;
+  }
+  #ns-section-featured-brands_1789747520259 [data-block-type="brand-group"] .swiper {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+}
+
+
+/* ---------------------------------------------------------------------
+   6. BANNERS DE CATEGORIA "Para elas / Compartilháveis / Para eles"
+      (banners_1789750697819) — sobretítulo dourado
+   --------------------------------------------------------------------- */
+#ns-section-banners_1789750697819 [data-block-type="text"]:has(+ [data-block-type="heading"]),
+#ns-section-banners_1789750697819 [data-block-type="text"]:has(+ [data-block-type="heading"]) * {
+  letter-spacing: .2em !important;
+  color: #a07b3f !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+}
+
+
+/* ---------------------------------------------------------------------
+   7. VITRINE "FRASCOS LACRADOS" (product-list_1789753082000)
+      Sem o efeito hover "DECANT".
+   --------------------------------------------------------------------- */
+#ns-section-product-list_1789753082000 .heading-block {
+  font-family: "Playfair Display", Georgia, serif !important;
+  font-weight: 700 !important;
+  letter-spacing: .04em !important;
+  text-transform: uppercase !important;
+  color: #1a1308 !important;
+}
+#ns-section-product-list_1789753082000 .product-item-name {
+  font-family: "Playfair Display", Georgia, serif !important;
+  font-size: 15px !important;
+  color: #1a1308 !important;
+  line-height: 1.35 !important;
+  margin-bottom: 4px !important;
+}
+#ns-section-product-list_1789753082000 .product-item-price {
+  font-size: 15px !important;
+  color: #1a1308 !important;
+  font-weight: 600 !important;
+}
+#ns-section-product-list_1789753082000 .swiper-pagination-bullet {
+  background: #a07b3f !important;
+  opacity: .3 !important;
+}
+#ns-section-product-list_1789753082000 .swiper-pagination-bullet-active {
+  opacity: 1 !important;
+}
+#ns-section-product-list_1789753082000 .slider-arrow {
+  fill: #a07b3f !important;
+}
+#ns-section-product-list_1789753082000 .product-item-stock-notice {
+  display: none !important;
+}
+#ns-section-product-list_1789753082000 .product-item-information,
+#ns-section-product-list_1789753082000 .product-item-link {
+  text-align: center !important;
+  align-items: center !important;
+}
+#ns-section-product-list_1789753082000 .product-item-image-container {
+  background: transparent !important;
+}
+#ns-section-product-list_1789753082000 .btn-primary {
+  background: #b8893c !important;
+  border-color: #b8893c !important;
+  color: #1a1308 !important;
+  border-radius: 2px !important;
+  text-transform: uppercase !important;
+  letter-spacing: .12em !important;
+  font-weight: 700 !important;
+}
+
+
+/* ---------------------------------------------------------------------
+   8. IMAGEM + TEXTO "A EXPERIÊNCIA" / "O QUE É O ACERVO RARO"
+      (image-with-text_1789756097831)
+   --------------------------------------------------------------------- */
+#ns-section-image-with-text_1789756097831 [data-block-type="image-with-text"] .heading-block,
+#ns-section-image-with-text_1789756097831 [data-block-type="image-with-text"] .heading-block p {
+  font-family: inherit !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: .22em !important;
+  text-transform: uppercase !important;
+  color: #a07b3f !important;
+  line-height: 1.4 !important;
+  margin: 0 !important;
+}
+#ns-section-image-with-text_1789756097831 [data-block-type="image-with-text"] .heading-block p:empty {
+  display: none !important;
+}
+#ns-section-image-with-text_1789756097831 [data-block-type="image-with-text"] .text-content {
+  font-size: 16px !important;
+  line-height: 1.75 !important;
+  color: #6f5d48 !important;
+  max-width: 460px;
+  margin: 0 auto !important;
+}
+#ns-section-image-with-text_1789756097831 [data-block-type="image-with-text"] .text-content strong {
+  font-family: "Playfair Display", Georgia, serif !important;
+  font-size: 28px !important;
+  font-weight: 400 !important;
+  line-height: 1.3 !important;
+  color: #1a1308 !important;
+}
+#ns-section-image-with-text_1789756097831 [data-block-type="image-with-text"] .text-content p {
+  margin: 0 0 10px !important;
+}
+#ns-section-image-with-text_1789756097831 [data-block-type="image-with-text"] .text-content p:last-child {
+  margin-bottom: 0 !important;
+}
+#ns-section-image-with-text_1789756097831 [data-block-type="image-with-text"] .media-visual img {
+  object-fit: cover;
+}
+@media (max-width:767px) {
+  #ns-section-image-with-text_1789756097831 [data-block-type="image-with-text"] .group-block {
+    padding: 24px 20px !important;
+  }
+  #ns-section-image-with-text_1789756097831 [data-block-type="image-with-text"] .text-content {
+    font-size: 15px !important;
+  }
+  #ns-section-image-with-text_1789756097831 [data-block-type="image-with-text"] .text-content strong {
+    font-size: 23px !important;
+  }
+}
+
+
+/* ---------------------------------------------------------------------
+   9. DEPOIMENTOS "Quem já faz parte do Acervo" (testimonials_1789753573419)
+   --------------------------------------------------------------------- */
+#ns-section-testimonials_1789753573419 [data-store="home-testimonials"] {
+  background-color: #fff4eb !important;
+}
+#ns-section-testimonials_1789753573419 [data-store="home-testimonials"] .heading-block {
+  font-family: "Playfair Display", Georgia, serif !important;
+  font-size: 34px !important;
+  font-weight: 400 !important;
+  line-height: 1.25 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  color: #1a1308 !important;
+}
+#ns-section-testimonials_1789753573419 [data-store="home-testimonials"] .heading-block::before {
+  content: "DEPOIMENTOS";
+  display: block;
+  font-family: "Public Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .22em;
+  color: #a07b3f;
+  margin-bottom: 14px;
+}
+#ns-section-testimonials_1789753573419 [data-store="home-testimonials"] .testimonial,
+#ns-section-testimonials_1789753573419 [data-store="home-testimonials"] .testimonial * {
+  font-family: "Playfair Display", serif !important;
+}
+#ns-section-testimonials_1789753573419 [data-store="home-testimonials"] .testimonial {
+  max-width: 340px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+#ns-section-testimonials_1789753573419 [data-store="home-testimonials"] .testimonial-name {
+  margin: 0 0 8px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: .18em !important;
+  text-transform: uppercase !important;
+  color: #1a1308 !important;
+}
+#ns-section-testimonials_1789753573419 [data-store="home-testimonials"] .testimonial-rating {
+  gap: 4px;
+  justify-content: center;
+  margin-bottom: 18px !important;
+}
+#ns-section-testimonials_1789753573419 [data-store="home-testimonials"] .testimonial-rating-point {
+  width: 11px !important;
+  height: 11px !important;
+  fill: #b8893c !important;
+  color: #b8893c !important;
+}
+#ns-section-testimonials_1789753573419 [data-store="home-testimonials"] .testimonial-title {
+  font-style: italic !important;
+  font-size: 21px !important;
+  line-height: 1.3 !important;
+  color: #1a1308 !important;
+  margin-bottom: 10px !important;
+}
+#ns-section-testimonials_1789753573419 [data-store="home-testimonials"] .testimonial-title br {
+  display: none;
+}
+#ns-section-testimonials_1789753573419 [data-store="home-testimonials"] .testimonial-content {
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+  color: #6f5d48 !important;
+}
+@media (max-width:767px) {
+  #ns-section-testimonials_1789753573419 [data-store="home-testimonials"] .heading-block {
+    font-size: 26px !important;
+  }
+  #ns-section-testimonials_1789753573419 [data-store="home-testimonials"] .flex-grid {
+    display: flex !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 14px !important;
+    margin: 0 -15px;
+    padding: 4px 30px 10px;
+  }
+  #ns-section-testimonials_1789753573419 [data-store="home-testimonials"] .flex-grid::-webkit-scrollbar {
+    display: none;
+  }
+  #ns-section-testimonials_1789753573419 [data-store="home-testimonials"] .testimonial {
+    flex: 0 0 84%;
+    max-width: none;
+    margin: 0;
+    scroll-snap-align: center;
+    box-sizing: border-box;
+    background: #fffaf5;
+    border: 1px solid #ecdcc8;
+    border-radius: 4px;
+    padding: 26px 20px;
+  }
+  #ns-section-testimonials_1789753573419 [data-store="home-testimonials"] .testimonial-title {
+    font-size: 19px !important;
+  }
+  #ns-section-testimonials_1789753573419 [data-store="home-testimonials"] .testimonial-content {
+    font-size: 14.5px !important;
+  }
+}
+
+
+/* ---------------------------------------------------------------------
+   10. CTA "CLUBE ACERVO RARO" — bloco escuro (rich-text_1790007266104)
+   --------------------------------------------------------------------- */
+#ns-section-rich-text_1790007266104 .rich-text-section,
+#ns-section-rich-text_1790007266104 .rich-text-section > .container,
+#ns-section-rich-text_1790007266104 .rich-text-section .rich-text {
+  background: #1a1308 !important;
+}
+#ns-section-rich-text_1790007266104 .rich-text-section {
+  padding: 76px 20px !important;
+}
+#ns-section-rich-text_1790007266104 .heading-block,
+#ns-section-rich-text_1790007266104 .heading-block p {
+  font-family: inherit !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: .22em !important;
+  text-transform: uppercase !important;
+  color: #b8893c !important;
+  margin: 0 !important;
+}
+#ns-section-rich-text_1790007266104 .heading-block p:empty {
+  display: none !important;
+}
+#ns-section-rich-text_1790007266104 .text-content {
+  font-size: 16px !important;
+  line-height: 1.75 !important;
+  color: #d9c9b5 !important;
+  max-width: 620px;
+  margin: 0 auto !important;
+}
+#ns-section-rich-text_1790007266104 .text-content strong {
+  display: block;
+  font-family: "Playfair Display", Georgia, serif !important;
+  font-size: 34px !important;
+  font-weight: 400 !important;
+  line-height: 1.25 !important;
+  color: #f7efe8 !important;
+  margin-bottom: 10px;
+}
+#ns-section-rich-text_1790007266104 .text-content p {
+  margin: 0 0 10px !important;
+}
+#ns-section-rich-text_1790007266104 .text-content p:last-child {
+  margin-bottom: 0 !important;
+}
+#ns-section-rich-text_1790007266104 .btn-primary {
+  background: #b8893c !important;
+  border: 1px solid #b8893c !important;
+  border-radius: 2px !important;
+  color: #1a1308 !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: .14em !important;
+  text-transform: uppercase !important;
+  padding: 17px 38px !important;
+  margin-top: 10px !important;
+  transition: all .3s ease;
+}
+#ns-section-rich-text_1790007266104 .btn-primary:hover,
+#ns-section-rich-text_1790007266104 .btn-primary:focus,
+#ns-section-rich-text_1790007266104 .btn-primary:active {
+  background: #a07b3f !important;
+  border-color: #a07b3f !important;
+  color: #fff4eb !important;
+}
+@media (max-width:767px) {
+  #ns-section-rich-text_1790007266104 .rich-text-section {
+    padding: 52px 0 !important;
+  }
+  #ns-section-rich-text_1790007266104 .rich-text-section > .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+  }
+  #ns-section-rich-text_1790007266104 .rich-text-section .rich-text {
+    margin: 0 !important;
+    padding: 0 24px !important;
+    gap: 12px !important;
+  }
+  #ns-section-rich-text_1790007266104 .text-content {
+    font-size: 15px !important;
+  }
+  #ns-section-rich-text_1790007266104 .text-content strong {
+    font-size: 26px !important;
+  }
+  #ns-section-rich-text_1790007266104 .btn-primary {
+    display: block !important;
+    width: 100% !important;
+    max-width: 300px;
+    margin: 6px auto 0 !important;
+  }
+}
+
+
+/* ---------------------------------------------------------------------
+   11. RODAPÉ (#ns-section-footer)
+   --------------------------------------------------------------------- */
+#ns-section-footer .footer-content {
+  background: #fff4eb !important;
+  color: #6f5d48 !important;
+  padding: 48px 32px 24px !important;
+}
+#ns-section-footer .footer-menu-title,
+#ns-section-footer .footer-newsletter-title {
+  font-family: "Playfair Display", Georgia, serif !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  letter-spacing: .04em !important;
+  color: #1a1308 !important;
+  text-transform: none !important;
+  margin-bottom: 14px !important;
+}
+#ns-section-footer .footer-institutional-description,
+#ns-section-footer .footer-newsletter-description,
+#ns-section-footer .footer-menu-list a,
+#ns-section-footer .footer-payment-shipping-label {
+  font-size: 14px !important;
+  color: #6f5d48 !important;
+  line-height: 1.7 !important;
+}
+#ns-section-footer .footer-menu-list a {
+  text-decoration: none !important;
+  transition: color .3s ease;
+}
+#ns-section-footer .footer-menu-list a:hover {
+  color: #a07b3f !important;
+}
+#ns-section-footer .footer-menu-list li {
+  margin-bottom: 6px !important;
+}
+#ns-section-footer .footer-institutional-image {
+  --footer-logo-height: 110px;
+}
+#ns-section-footer .newsletter-form-input {
+  border: 1px solid #d9c9b5 !important;
+  border-radius: 0 !important;
+  background: #fffaf5 !important;
+  color: #1a1308 !important;
+  padding: 12px 14px !important;
+  font-size: 14px !important;
+  box-shadow: none !important;
+}
+#ns-section-footer .newsletter-form-input::placeholder {
+  color: #a08f7d !important;
+}
+#ns-section-footer .newsletter-form-button {
+  background: #b8893c !important;
+  border: 1px solid #b8893c !important;
+  border-radius: 0 !important;
+  color: #1a1308 !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: .1em !important;
+  text-transform: uppercase !important;
+  padding: 12px 18px !important;
+}
+#ns-section-footer .newsletter-form-button:hover {
+  background: #a07b3f !important;
+  border-color: #a07b3f !important;
+  color: #fff4eb !important;
+}
+#ns-section-footer .footer-legal-container {
+  border-top: 1px solid #ecdcc8 !important;
+  margin-top: 28px !important;
+  padding-top: 18px !important;
+}
+#ns-section-footer .footer-copyright {
+  font-size: 12px !important;
+  color: #8a7863 !important;
+}
+#ns-section-footer .footer-powered-by svg {
+  fill: #8a7863 !important;
+}
+#ns-section-footer .icon-logo {
+  opacity: .85;
+}
+@media (max-width:767px) {
+  #ns-section-footer .footer-content {
+    padding: 36px 20px 20px !important;
+  }
+  #ns-section-footer .footer-menu-title,
+  #ns-section-footer .footer-newsletter-title {
+    margin-top: 22px !important;
+    margin-bottom: 10px !important;
+  }
+  #ns-section-footer .footer-institutional-description,
+  #ns-section-footer .footer-newsletter-description,
+  #ns-section-footer .footer-menu-list a {
+    font-size: 13.5px !important;
+  }
+}
+#ns-section-footer .footer-menu-toggle-title,
+#ns-section-footer .accordion-title {
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  cursor: default;
+}
+#ns-section-footer .footer-menu-accordion {
+  background: transparent !important;
+}
+
+
+/* =====================================================================
+   PALETA / TOKENS usados em todo o site (resumo, não está no HTML assim)
+   ---------------------------------------------------------------------
+   Dourado principal ....... #b8893c
+   Dourado escuro (hover) .. #a07b3f
+   Marrom quase preto ...... #1a1308
+   Marrom texto ............ #6f5d48
+   Marrom claro texto ...... #8a7863 / #a08f7d
+   Bege fundo .............. #fff4eb
+   Bege claro cards ........ #fffaf5
+   Bege linha/borda ........ #ecdcc8 / #d9c9b5
+   Bege texto claro ........ #d9c9b5 / #f7efe8
+   Overlay hover decant .... #b08c6e (mix-blend multiply)
+   Fontes: "Playfair Display" (títulos) · "Public Sans" (sobretítulos)
+   ===================================================================== */
