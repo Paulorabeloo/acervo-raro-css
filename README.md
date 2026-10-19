@@ -10,7 +10,11 @@ CSS customizado da home da loja [acervoraro.com.br](https://acervoraro.com.br), 
 
 ### Demonstração
 
-🎬 **[Assista ao vídeo da home](demo-acervo-raro.mp4)** (48 s, MP4)
+
+
+https://github.com/user-attachments/assets/c48a928b-3531-4375-9f09-9f661a204a13
+
+
 
 ### Arquivos
 
@@ -59,7 +63,11 @@ Custom CSS for the home page of [acervoraro.com.br](https://acervoraro.com.br), 
 
 ### Demo
 
-🎬 **[Watch the home page video](demo-acervo-raro.mp4)** (48 s, MP4)
+
+
+https://github.com/user-attachments/assets/33e081c7-e3ca-4147-a1a3-d21a248c70f8
+
+
 
 ### Files
 
